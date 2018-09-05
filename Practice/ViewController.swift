@@ -9,17 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //instantiating instead of segue
+    @IBAction func HomeButton(_ sender: UIButton) {
+        let viewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeView") as UIViewController
+        self.present(viewController, animated: false, completion: nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
